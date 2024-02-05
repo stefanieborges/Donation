@@ -1,0 +1,50 @@
+﻿@model Donation.Models.DoacaoModel
+@{
+    ViewData["Title"] = "Editar Doações";
+}
+<div class="container">
+    <div>
+        <h1>Edição da Doação</h1>
+    </div>
+    <form method="post" asp-controller="Doacao" asp-action="Editar">
+        <input type="hidden" asp-for="id" />
+        <div class="form-group">
+            <label for="Nome">Nome</label>
+            <input type="text" class="form-control" asp-for="nome" id="Nome" placeholder="Digite o nome da doação">
+            <span asp-validation-for="nome" style="color: blueviolet;"></span>
+        </div>
+        <div class="form-group">
+            <label for="Nome">Imagem</label>
+            <input type="text" class="form-control" asp-for="image" id="image" placeholder="Digite url da imagem da aplicação">
+            <span asp-validation-for="image" style="color: blueviolet;"></span>
+        </div>
+        <div class="form-group">
+            <label for="Descricao">Descrição</label>
+            <input type="text" class="form-control" asp-for="descricao" id="Descricao" placeholder="Digite a descrição da doação">
+            <span asp-validation-for="descricao" style="color: blueviolet;"></span>
+        </div>
+        <div class="form-group">
+            <label for="Valor">Valor</label>
+            <input type="text" class="form-control" asp-for="valor" id="Valor" placeholder="Digite o valor da doação">
+            <span asp-validation-for="valor" style="color: blueviolet;"></span>
+        </div>
+        <div class="form-group">
+            <label for="Contato">Contato</label>
+            <input type="text" class="form-control" asp-for="contato" id="Contato" placeholder="Digite o contato da doação">
+            <span asp-validation-for="contato" style="color: blueviolet;"></span>
+        </div>
+        <div class="form-group">
+            <label for="Contato">Endereço</label>
+            <input type="text" class="form-control" asp-for="endereco" id="Contato" placeholder="Digite o endereço da doação">
+            <span asp-validation-for="endereco" style="color: blueviolet;"></span>
+        </div>
+        <div style="display: flex; justify-content:space-around; margin-top: 5px;">
+            <button type="submit" class="botao esquerdo">Editar</button>
+            <a class="botao direito" asp-controller="Doacao" asp-action="Index">Voltar</a>
+        </div>
+    </form>
+</div>
+<footer class="footer_cadastro">
+    <p asp-area="" asp-controller="Home" asp-action="Privacy">Desenvolvido academicamente por Stéfanie Borges Batista</p>
+</footer>
+

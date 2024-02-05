@@ -1,0 +1,65 @@
+﻿@model IEnumerable<Donation.Models.DoacaoModel>
+@{
+    ViewData["Title"] = "Doações";
+}
+
+<nav class="nav_doacao">
+    <div class="nav-bar-logo">
+        <p>Donation</p>
+    </div>
+    <div class="nav-bar-cad">
+        <a asp-controller="Doacao" asp-action="Cadastrar">Cadastre aqui a doação</a>
+        <a asp-area="" asp-controller="Home" asp-action="Index">Voltar para o início</a>
+    </div>
+</nav>
+
+@if (Model != null)
+{
+    var ativos = Model.Where(d => d.ativo == true);
+    var inativos = Model.Where(d => d.ativo == false);
+
+
+    var ativosOrdenados = ativos.OrderByDescending(d => d.id);
+    var inativosOrdenados = inativos.OrderByDescending(d => d.id);
+
+
+    var modelOrdenado = ativosOrdenados.Concat(inativosOrdenados);
+    <div class="BodyProdutos">
+        @foreach (var doacao in modelOrdenado)
+        {
+
+            <div class="DivCardProduto" id="@doacao.id">
+                <p class="titlecad">@doacao.nome</p>
+                <img src="@doacao.image" alt="ImagemProduto">
+                <div class="text_card">
+                    <p><b>Descrição: </b>@doacao.descricao</p>
+                    <p><b>Contato: </b>@doacao.contato</p>
+                    <p><b>Valor: </b>@doacao.valor</p>
+                    <p><b>Endereço: </b>@doacao.endereco</p>
+                </div>
+
+                @if (doacao.ativo == true)
+                {
+
+                    <a class="bottom e bEditar" asp-controller="Doacao" asp-action="Editar" asp-route-id="@doacao.id">Editar</a>
+                    <a class="bottom bDetalhes" asp-controller="Doacao" asp-action="Adquirir" asp-route-id="@doacao.id">Adquira aqui</a>
+                    <div class=" bottom bVendidoDisponivel">
+                        <a href="" class="bn">Disponível</a>
+                    </div>
+                }
+                else
+                {
+                    <a href="" class="bottom bVendido">Doação Concluída</a>
+                    <span>Doado para @doacao.beneficario em @doacao.dataFinalizacao</span>
+                }
+            </div>
+
+
+        }
+    </div>
+    <footer class="footer">
+        <p asp-area="" asp-controller="Home" asp-action="Privacy">Desenvolvido academicamente por Stéfanie Borges Batista</p>
+    </footer>
+}
+
+

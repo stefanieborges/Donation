@@ -1,0 +1,248 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+nav {
+    display: flex;
+    background-color: #210e50;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+
+
+.nav-bar-logo {
+    display: flex;
+    color: #fff;
+    width: 10%;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    border-radius: 5px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+    margin-left: 80px;
+}
+.nav-bar-logo{
+    margin-top: 10px;
+}
+.nav-bar-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-bar-search input {
+    height: 50px;
+    width: 600px;
+    display: flex;
+    border: 1px solid #dddada;
+    padding-left: 15px;
+}
+
+.nav-bar-searchImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-bar-searchImg img {
+    height: 30px;
+    width: 30px;
+    margin-left: 20px;
+}
+
+
+.nav-bar-cad {
+    background-color: #f3eeff;
+    margin-right: 80px;
+    font-weight: bold;
+    background-color: #210e50;
+    display:flex;
+}
+.nav-bar-cad a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 60px
+}
+.nav-bar-cad a:hover{
+    text-decoration:underline;
+}
+
+.maior {
+    display: flex;
+    flex-direction: column;
+}
+
+.BodyProdutos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    padding-inline: 50px;
+    padding-top: 70px;
+}
+
+.DivCardProduto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 220px;
+    height: 620px;
+    border-radius: 12px;
+    padding-inline: 30px;
+    box-shadow: 4px 4px 12px #aaaa;
+    margin-block: 10px;
+    margin-inline:5px;
+}
+
+.titlecad {
+    background-color: #210e50;
+    width: 222px;
+    border-radius: 5px 5px 0px 0px;
+    text-align: center;
+    color: #fff;
+}
+
+
+
+.DivCardProduto img {
+    width: 200px;
+    height: 200px;
+}
+
+.bottom {
+    border-radius: 5px;
+    margin-top: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+}
+
+.bottom:hover {
+    opacity: 0.8;
+    color: #fff;
+}
+
+.bDetalhes {
+    color: #fff;
+    padding: 10px;
+    background-color: #210e50;
+}
+
+.bDetalhes:hover {
+    color: #fff;
+    padding: 9px;
+    text-decoration: underline;
+}
+
+.bEditar:hover {
+    color: #fff;
+    padding-inline: 19px;
+    padding-block: 7px;
+    text-decoration: underline;
+}
+
+.bEditar {
+    padding-inline: 20px;
+    padding-block: 8px;
+    background-color: #5a5a5a;
+}
+
+.bVendidoDisponivel {
+    border-radius: 5px;
+    margin-top: 5px;
+    color: #fff;
+    background-color: #054f05;
+    padding: 9px;
+}
+
+.bVendido {
+    color: #fff;
+    background-color: #a4422a;
+    padding: 9px;
+}
+.bn:hover{
+    opacity:0.8;
+}
+.bVendidoDisponivel a:hover {
+    color: #fff;
+    cursor: no-drop;
+    opacity: 0.8;
+    text-decoration:none;
+}
+
+.bVendido:hover {
+    color: #fff;
+    cursor: no-drop;
+    text-decoration: none;
+}
+
+.bn {
+    text-decoration: none;
+    color: #fff;
+}
+@media only screen and (max-width: 1400px) {
+    .BodyProdutos {
+        margin-top: 60px;
+    }
+
+    .nav-bar-cad {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+        background-color: #210e50;
+        padding: 0;
+        text-align: center;
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+.BodyProdutos {
+    padding-inline: 0;
+    justify-content: center;
+}
+
+nav {
+    flex-direction: column;
+}
+.nav-bar-logo{
+    margin-left:0px;
+}
+
+.nav-bar-cad {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    background-color: #210e50;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+}
+
+.nav-bar-cad a {
+    margin-left: 0px;
+}
+
+.nav-bar-search input {
+width: 300px;
+height: 20px;
+}
+
+.nav-bar-searchImg img {
+    width: 20px;
+    height: 20px;
+}
+.footer_cadastro {
+    padding-inline: 5px;
+}
+}

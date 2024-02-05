@@ -1,0 +1,140 @@
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+}
+
+.logo {
+    display: flex;
+    color: #fff;
+    width: 100%;
+    height: 60px;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+    background-color: #210e50;
+}
+
+.texto_home {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-height: 85vh;
+    width: 100%;
+    text-align: center;
+}
+
+.texto_home p{
+    text-align: justify;
+}
+
+.div_image {
+    display: flex;
+    flex-direction: row;
+}
+
+.div_image img {
+   min-width: 200px
+}
+
+.padding {
+    padding-inline: 30px;
+}
+
+.div_texto {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7vh;
+    color: #fff;
+    background-color: #000;
+    width: 100%;
+    text-align: center;
+}
+
+ .footer p {
+        margin-top: 10px;
+}
+
+.bottom_home {
+    padding-inline: 40px;
+    padding-block: 20px;
+    background-color: #210e50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.bottom_home:hover{
+    opacity: 0.9;
+    color: #fff;
+    text-decoration: underline;
+}
+    
+    @media only screen and (max-width: 1200px) {
+        .texto_home {
+        flex-direction: column;
+    }
+    .div_image {
+        width: 400px;
+        height: 400px;
+    }
+    .div_texto {
+        margin-top: 20px;
+    }
+    .footer {
+        margin-top: 30px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .texto_home {
+        flex-direction: column;
+    }
+
+    .div_image {
+        width: 200px;
+        height: 200px;
+    }
+    .footer {
+        margin-top: 30px;
+    }
+
+    .div_texto {
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .padding {
+        padding-inline: 10px;
+    }
+    .div_image {
+         display:none;
+    }
+    .footer{
+        margin-top: 30px;
+    }
+
+    .bottom_home {
+        padding-inline: 20px;
+    }
+    .texto_home{
+        height:90vh;
+    }
+    .footer_cadastro {
+        padding-inline: 5px;
+    }
+}

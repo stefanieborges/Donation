@@ -1,0 +1,67 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+.footer_cadastro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7vh;
+    color: #fff;
+    background-color: #000;
+    width: 100%;
+    text-align: center;
+    height:6vh;
+}
+
+.footer_cadastro p {
+    margin-top: 10px;
+}
+
+.container {
+    width: 100%;
+    height: 94vh;
+}
+
+.container h1 {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+}
+
+.botao {
+    margin-top:20px;
+    padding-block: 15px;
+    border-radius:5px;
+    color: #fff;
+    padding-inline:40px;
+    
+}
+
+.esquerdo {
+    background-color: #210e50;
+}
+
+.direito {
+    text-decoration: none;
+    background-color: #5a5a5a;
+}
+
+.botao:hover{
+    opacity:0.9;
+    text-decoration: underline;
+    color:#fff;
+}
+
+@media only screen and (max-width: 500px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items:center;
+    }
+
+    .botao{
+        padding: 5px;
+        margin-left: 5px;
+    }
+    .footer_cadastro{
+        padding-inline: 5px;
+    }
+}
